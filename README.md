@@ -8,27 +8,27 @@ To start the project, we should understand the data. So, we had two sample files
 The dataset has been labeled by the presence of  ":)" for positive tweets and ":(" for negative tweets.
 You can download the dataset on https://www.kaggle.com/c/epfml17-text/data.
 
-We should notice that we didn't use all the full dataset (250.000.000) but only a portion of 22% of the full dataset which corresponds to: 550.000 tweets. Indeed, we were not able to run our models for the full dataset because it need a high computationnal power. Therefore, we strongly believe that we can really improve our score if we would be able to fit our model with all the dataset using the same models. 
+We should notice that we didn't use all the full dataset (250.000.000) but only a portion of 22% of the full dataset which corresponds to: 550.000 tweets. Indeed, we were not able to run our models for the full dataset because it needs a high computationnal power. Therefore, we strongly believe that we can really improve our score if we would be able to fit our model with all the dataset using the same models.
 
 ## Description of Files and Folders
 
 The folder contains the followings:
 
 - `packages.txt`: Contains the required packages to run our model
-- `features.py`: Contains the details of the building of the feature matrix
-- `models.py`: Contains the details of the both models 
-- `run.py`: Load the pickled neural network models + fits the obtained results with XGBoost + Creates the Kaggle csv submission
-- `preprocess.py`: Preprocesses all the tweets (Cleaning part of the tweets)
-- `dico`: This folder contains a dictionnary that will help us for the preprocessing
-- `features`: This folder contains the pickled files of the two models for both the train and test set
+- `dico_preprocess.txt`: Contains the dictionnary that we will use to correct the mistakes in the preprocessing
+- `building_features.py`: Contains the function which build the feature matrix
+- `models.py`: Contains the details of the both models and create the pickled_features
+- `pickled_features`: This folder contains the pickled files of the two models for both the train and test set
+- `run.py`: Load the pickled models and fits the obtained results with XGBoost and finaly Creates the csv file for submission
 
-## How to run the code
+## Running the code
 
-- Start by installing the packages in the Final folder :
+- You should start by downloading the data from the link and put them in the folder.
+- Install the packages that we need to run our models :
 ```
 $ pip install -r packages.txt
 ```
-If you are in Mac OS X you can face a problem to install the xgboost package. So, in this case, you can tape the following instructions:
+You can face a problem to install the xgboost package. So, in this case, you can tape the following instructions:
 
 ```
 $ git clone --recursive https://github.com/dmlc/xgboost
@@ -42,25 +42,20 @@ $ sudo python setup.py install
 If you have a problem with the keras package, you should just verify that the tensorflow is properly installed.
 
 
-- To run the final model :
-
-We stored all the features of the two models in the folder features.
-To run the models using the pickled features we provide :
+- To run the final model with the pickled features, you should just run `run.py`, it will use the pickled files that we stores in the corresponding folder. 
  
 ```
 $ python3 run.py 
 ```
 
-This will yield our Kaggle prediction that scored 0.84020.
+This will create a csv file that we use for the Kaagle submission. This yield to our best score in Kaagle: 0.8588.
 
-We used here just the small sample files of datasets ( 200,000 tweets). We also added the bi-grams and we fitted the XGBoost over the matrix of probabilities (2 by 200,000).
 
-However, if you want to run the models from the start, please follow these steps :
+However, if you want to run the models from the beginning, you should follow these steps :
 
-- run the models in the file `models.py` and dump the features, which will save the pickled files of the two models in the folder `features`. You can also run just one model by commenting the other.
-- You can also modify the value of the arguments of the function `dumpFeatures` in the file `models.py` to run a personalized model.
-- After dumping all the features, load them and run XGBoost on the probability matrix (by means of `run.py` ).
-
+- run the models in the file `models.py` which will save the pickled files of the two models in the folder `pickled_features`.
+- You can also modify the value of the arguments of the function `build_features` in the file `models.py` to run a personalized model.
+- After this, we just run the file `run.py` to create the csv file that we wil submit in Kaagle to see the score.
 
 ## Authors
 

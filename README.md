@@ -8,7 +8,7 @@ To start the project, we should understand the data. So, we had two sample files
 The dataset has been labeled by the presence of  ":)" for positive tweets and ":(" for negative tweets.
 You can download the dataset on https://www.kaggle.com/c/epfml17-text/data.
 
-We should notice that we didn't use all the full dataset (250.000.000) but only a portion of 22% of the full dataset which corresponds to: 550.000 tweets. Indeed, we were not able to run our models for the full dataset because it needs a high computationnal power. Therefore, we strongly believe that we can really improve our score if we would be able to fit our model with all the dataset using the same models.
+We should notice that we didn't use all the full dataset (2.500.000) but only a portion of 22% of the full dataset which corresponds to: 550.000 tweets. Indeed, we were not able to run our models for the full dataset because it needs a high computationnal power. Therefore, we strongly believe that we can really improve our score if we would be able to fit our model with all the dataset using the same models.
 
 ## Description of Files and Folders
 
@@ -23,7 +23,7 @@ The folder contains the followings:
 
 ## Running the code
 
-- You should start by downloading the data from the link and put them in the folder.
+- You should start by downloading the data from the link described above (the folder that contain the data is: `twitter-datasets.zip`) and put them in our folder.
 - Install the packages that we need to run our models :
 ```
 $ pip install -r packages.txt

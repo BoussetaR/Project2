@@ -54,6 +54,10 @@ This will create a csv file that we use for the Kaagle submission. This yield to
 However, if you want to run the models from the beginning, you should follow these steps :
 
 - run the models in the file `models.py` which will save the pickled files of the two models in the folder `pickled_features`.
+
+```
+$ python3 models.py 
+```
 - You can also modify the value of the arguments of the function `build_features` in the file `models.py` to run a personalized model.
 - After this, we just run the file `run.py` to create the csv file that we wil submit in Kaagle to see the score.
 

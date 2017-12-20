@@ -1,35 +1,16 @@
-# Sentiment Analysis on Twitter data 
+# Text Sentiment Classification
 
-For the course "Pattern Classification and Machine Learning" at EPFL, we worked on sentiment analysis over twitter data. This project was a competition hosted by Kaggle : https://www.kaggle.com/c/epfml17-text
-We had at our disposal two sample files of negative and positive labels both containing 100,000 tweet.
-Also, we had a complete dataset of 2,500,000 tweets (1,250,000 for each label)
-The dataset has been labeled by the presence of  ":)" for positive tweets and ":(" for negative tweets 
-you can download the dataset on https://www.kaggle.com/c/epfml17-text/data
+This project is part of the course "Machine Learning" at EPFL, we choose to work on the Text Sentiment Classification. This project was a competition hosted by Kaggle and this is the link https://www.kaggle.com/c/epfml17-text, you can see our score and our ranking via this link, our team name is "Mario", our final and best score on kaagle is: 0.8588.
 
-## Results
+# Prerequisites
 
-After building the 2 models, we fitted XGBoost over the matrix of probabilities (2 by 200,000) which yield the final result.
+To start the project, we should understand the data. So, we had two sample files of negative and positive labels both containing 100,000 tweets. In addition to that, we had a full dataset of 2,500,000 tweets ( 1,250,000 for each label).
+The dataset has been labeled by the presence of  ":)" for positive tweets and ":(" for negative tweets.
+You can download the dataset on https://www.kaggle.com/c/epfml17-text/data.
 
-In our final model we take just the small sample files of the datasets (200,000 tweets) for the train, to fit our model.
+We should notice that we didn't use all the full dataset (250.000.000) but only a portion of 22% of the full dataset which corresponds to: 550.000 tweets. Indeed, we were not able to run our models for the full dataset because it need a high computationnal power. Therefore, we strongly believe that we can really improve our score if we would be able to fit our model with all the dataset using the same models. 
 
-In these 2 models, we mainly used LSTM, Convolutions, MaxPooling layers. We mixed them by changing the seeds and the set of features.
-You can see the details of the models on Final/models.
-Here are the results for the 2 models and the final result :
-
-| Models       | Accuracy           | Validation Acc |
-| -------------|:------------------:|:-------------------:|
-| Model 1      | ????????           | ????????            |
-| Model 2      | ????????           | ????????            |
-
-
-After that, we applied XGBoost over the matrix of probabilities which resulted in an accuracy of ???????? and a validation accuracy (submission in kaagle) of ????????.
-
-We were ranked ??st out of ?? teams and scored 0.8402 (private) on kaggle
-You can see the leaderboard on : https://www.kaggle.com/c/epfml17-text/leaderboard
-
-We should notice that we didn't use the full dataset (250.000.000) but only the small portion of the dataset which corresponds to 8% of the full datasets. Indeed, we were not able to run our models for the full dataset because it need a high computationnal power. Therefore, we strongly believe that we can really improve our score if we would be able to fit our model with all the dataset using the same models. 
-
-## Files/Folders
+## Description of Files and Folders
 
 The folder contains the followings:
 

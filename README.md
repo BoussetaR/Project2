@@ -18,7 +18,7 @@ The folder contains the followings:
 - `dico_preprocess.txt`: Contains the dictionnary that we will use to correct the mistakes in the preprocessing
 - `building_features.py`: Contains the function which build the feature matrix
 - `models.py`: Contains the details of the both models and create the pickled_features
-- `pickled_features`: This folder contains the pickled files of the two models for both the train and test set
+- `pickled_features`: This folder contains the pickled files of the two models for both the train and test set. It corresponds to the arrays of probabilities for each model. They will be used to run the final model with XGBoost.
 - `run.py`: Load the pickled models and fits the obtained results with XGBoost and finaly Creates the csv file for submission
 
 ## Running the code

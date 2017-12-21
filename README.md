@@ -61,6 +61,11 @@ $ python3 models.py
 - You can also modify the value of the arguments of the function `build_features` in the file `models.py` to run a personalized model.
 - After this, we just run the file `run.py` to create the csv file that we wil submit in Kaggle to see the score.
 
+## Time estimation
+
+- If you just run the file `run.py`. In this case, it will use the pickled features that we have already saved in the corresponding folder. So it will take approximately 1 minute to create the csv file for submission.
+- If you want to run the file `models.py`, the estimating time depends on the parameters that you will choose for the function `build_features`. In the case that you take the parameters that we had already chosen (22% of the full datasets with bigrams) then the estimating time will be approximately 4 hours.
+
 ## Authors
 
 - Mohammed Reda Bousseta : mohammed.bousseta@epfl.ch

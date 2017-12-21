@@ -1,6 +1,6 @@
 # Text Sentiment Classification
 
-This project is part of the course "Machine Learning" at EPFL, we choose to work on the Text Sentiment Classification. This project was a competition hosted by Kaggle and this is the link https://www.kaggle.com/c/epfml17-text, you can see our score and our ranking via this link, our team name is "Mario", our final and best score on kaagle is: 0.8588.
+This project is part of the course "Machine Learning" at EPFL, we choose to work on the Text Sentiment Classification. This project was a competition hosted by Kaggle and this is the link https://www.kaggle.com/c/epfml17-text, you can see our score and our ranking via this link, our team name is "Mario", our final and best score on kaggle is: 0.8588.
 
 # Prerequisites
 
@@ -48,7 +48,7 @@ If you have a problem with the keras package, you should just verify that the te
 $ python3 run.py 
 ```
 
-This will create a csv file that we use for the Kaagle submission. This yield to our best score in Kaagle: 0.8588.
+This will create a csv file that we use for the Kaggle submission. This yield to our best score in Kaggle: 0.8588.
 
 
 However, if you want to run the models from the beginning, you should follow these steps :
@@ -59,7 +59,7 @@ However, if you want to run the models from the beginning, you should follow the
 $ python3 models.py 
 ```
 - You can also modify the value of the arguments of the function `build_features` in the file `models.py` to run a personalized model.
-- After this, we just run the file `run.py` to create the csv file that we wil submit in Kaagle to see the score.
+- After this, we just run the file `run.py` to create the csv file that we wil submit in Kaggle to see the score.
 
 ## Authors
 
